@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    margin: 20px 0;
+}
+
+label {
+    font-size: 1.2em;
+    margin-right: 10px;
+}
+
+input {
+    padding: 10px;
+    font-size: 1em;
+    width: 100px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p#message {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 20px;
+}
+
+#guess {
+    border-radius: 15px;
+    border-color: #FEC195;
+    font-weight: 600;
+    border-width: 3px;
+}

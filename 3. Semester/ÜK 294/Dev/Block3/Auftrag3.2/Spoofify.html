@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spoofify</title>
+    <link rel="stylesheet" href="Spoofify.css">
+</head>
+<body>
+    <header>
+        <h1>Spoofify</h1>
+        <div class="buttons">
+            <button id="add">Add three more</button>
+            <button id="remove">Remove first three</button>
+        </div>
+    </header>
+
+    <section>
+        <h2>Your spoofed overview</h2>
+        <p>Welcome to Spoofify, <em>the rip-off music streaming service</em> of ICT Module 291!</p>
+        <h3>Top of your birthweek</h3>
+        <ol>
+            <li><strong>Jump</strong> by Kris Kross</li>
+            <li><strong>My Lovin' (You're Never Gonna Get It)</strong> by En Vogue</li>
+            <li><strong>Bohemian Rhapsody</strong> by Queen</li>
+            <li><strong>Save The Best For Last</strong> by Vanessa Williams</li>
+            <li><strong>Live And Learn</strong> by Joe Public</li>
+        </ol>
+
+        <h3>Latest releases randomized</h3>
+        <div class="album-grid">
+            <div class="album-item" onclick="showTracks(1)">
+                <img src="https://loremflickr.com/480/480/cd,album,cover?random=1" alt="Album 1">
+                <p>Jump by Kris Kross</p>
+            </div>
+            <div class="album-item" onclick="showTracks(2)">
+                <img src="https://loremflickr.com/480/480/cd,album,cover?random=2" alt="Album 2">
+                <p>My Lovin' (You're Never Gonna Get It) by En Vogue</p>
+            </div>
+            <div class="album-item" onclick="showTracks(3)">
+                <img src="https://loremflickr.com/480/480/cd,album,cover?random=3" alt="Album 3">
+                <p>Bohemian Rhapsody by Queen</p>
+            </div>
+            <div class="album-item" onclick="showTracks(4)">
+                <img src="https://loremflickr.com/480/480/cd,album,cover?random=4" alt="Album 4">
+                <p>Album 4</p>
+            </div>
+            <div class="album-item" onclick="showTracks(5)">
+                <img src="https://loremflickr.com/480/480/cd,album,cover?random=5" alt="Album 5">
+                <p>Live And Learn by Joe Public</p>
+            </div>
+            <div class="album-item" onclick="showTracks(6)">
+                <img src="https://loremflickr.com/480/480/cd,album,cover?random=6" alt="Album 6">
+                <p>Live And Learn by Joe Public</p>
+            </div>
+        </div>
+        <div id="tracklist"></div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Spooky Example, Inc.</p>
+    </footer>
+
+    <script>
+        function showTracks(albumId) {
+            const tracklists = {
+                1: ["Track 1A", "Track 1B", "Track 1C"],
+                2: ["Track 2A", "Track 2B", "Track 2C"],
+                3: ["Track 3A", "Track 3B", "Track 3C"],
+                4: ["Track 4A", "Track 4B", "Track 4C"],
+                5: ["Track 5A", "Track 5B", "Track 5C"],
+                6: ["Track 6A", "Track 6B", "Track 6C"]
+            };
+            const tracks = tracklists[albumId] || ["No tracks available"];
+            const trackListElement = document.getElementById('tracklist');
+            trackListElement.innerHTML = `<h3>Tracks for Album ${albumId}</h3><ul>` + 
+                                         tracks.map(track => `<li>${track}</li>`).join('') + 
+                                         `</ul>`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einfache Interaktion</title>
+</head>
+<body>
+    <h1 id="increment">0</h1>
+    <button onclick="incrementNumber()">Click me</button>
+
+
+    <h1 id="increment2">0</h1>
+    <button onclick="incrementNumber2()">Button 2</button>
+
+    <div id="Container">
+        <img id="Ball" src="./soccer-ball-svgrepo-com.svg">
+        <div id="linkerBereich"></div>
+        <div id="rechterBereich"></div>
+    </div>
+
+    <style>
+        #Container {
+            position: relative;
+            margin-top: 200px;
+            background-color: green;
+            width: 400px;
+            height: 200px;
+        }
+    
+        #Ball{
+            position: absolute;
+            width: 50px;
+            right: 0;
+            top: 0;
+        }
+    
+        #linkerBereich {
+            width: 50px;
+            height: 100%;
+            border: 1px solid white;
+            position: absolute;
+            left: 0px;
+        }
+    
+        #rechterBereich {
+            width: 50px;
+            height: 100%;
+            border: 1px solid white;
+            position: absolute;
+            right: 0px;
+        }
+    </style>
+    
+    <script>
+        var count = 0; 
+        var count2 = 0;
+        var ball = document.getElementById('Ball');
+        var container = document.getElementById('Container');
+    
+        function incrementNumber() {
+            count++; 
+            document.getElementById('increment').innerText = count; 
+            alert("Hallo, Welt"); 
+        }
+    
+        function incrementNumber2() {
+            count2++; 
+            document.getElementById('increment2').innerText = count2; 
+        }
+    
+        container.addEventListener('click', function(event) {
+            var rect = event.target.getBoundingClientRect();
+            var x = event.clientX - rect.left;
+            var y = event.clientY - rect.top;
+    
+            ball.style.top = y + 'px';
+            ball.style.left = x + 'px';
+    
+            if (x < 50) {
+                count++;
+                document.getElementById('increment').innerText = count;
+            } else if (x > 350) {
+                count2++;
+                document.getElementById('increment2').innerText = count2;
+            }
+        });
+    </script>
+</body>
+</html>

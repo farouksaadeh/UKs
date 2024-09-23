@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Auftrag 7.3: Formular interaktiv erweitern</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <form id="userForm">
+        <label for="firstName">Vorname:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        
+        <br>
+
+        <label for="lastName">Nachname:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        
+        <br>
+
+        <label for="street">Strasse:</label>
+        <input type="text" id="street" name="street" required>
+        
+        <br>
+
+        <label for="zipcode">Postleitzahl:</label>
+        <input type="text" id="zipcode" name="zipcode" required>
+        
+        <br>
+
+        <label for="place">Ort:</label>
+        <input type="text" id="place" name="place" readonly>
+        
+        <br>
+
+        <button type="submit">Absenden</button>
+    </form>
+</body>
+</html>

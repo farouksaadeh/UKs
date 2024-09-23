@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum mit Verschiedenen Scroll-Effekten</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Impressum</h1>
+        <nav>
+            <ul>
+                <li><a href="#section1">Allgemeines</a></li>
+                <li><a href="#section2">Rechtliches</a></li>
+                <li><a href="#section3">Datenschutz</a></li>
+                <li><a href="#section4">Kontakt</a></li>
+                <li><a href="#section5">Über uns</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="section section1" id="section1">
+        <h2>Abschnitt 1: Allgemeine Informationen</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ut ante ut justo venenatis egestas. Nullam aliquet magna sit amet velit sodales, non condimentum orci ultricies. Suspendisse potenti.</p>
+        <p>Nam sit amet nisl a nulla ultricies ullamcorper. Suspendisse finibus, nisi et ultricies aliquet, orci ligula pharetra justo, vel consequat libero felis vel orci.</p>
+        <img src="https://shop.sylt-bildergalerie.de/cdn/shop/products/20080319_Rantum_Steg_I_063_vooimacttifffineart_2048x.jpg?v=1587400099" alt="Steg über Wasserlandschaft">
+        <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Sed porttitor lectus nibh.</p>
+        <p>Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada.</p>
+    </div>
+
+    <div class="section section2" id="section2">
+        <h2>Abschnitt 2: Rechtliche Hinweise</h2>
+        <p>Quisque non ligula at ipsum dictum vestibulum vel nec sem. Etiam ultricies est nec suscipit condimentum. Sed convallis vehicula purus.</p>
+        <p>Nulla a lacus magna. Fusce ac posuere nisi. Nullam tincidunt magna ac felis viverra, in tincidunt arcu vestibulum.</p>
+        <img src="https://www.davidkoester.de/wp-content/uploads/2018/04/patagonien-landschaft-wasserfall-los-glaciares-fitz-roy.jpg" alt="Patagonien Landschaft">
+        <p>Mauris quis ipsum posuere, ultricies nisi non, malesuada eros. Nullam ac scelerisque mauris, a pharetra urna.</p>
+        <p>Vivamus mollis risus nec magna porttitor, a elementum justo euismod. Curabitur vel fringilla nulla.</p>
+    </div>
+
+    <div class="section section3" id="section3">
+        <h2>Abschnitt 3: Datenschutz</h2>
+        <p>Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.</p>
+        <p>Sed porttitor lectus nibh. Pellentesque in ipsum id orci porta dapibus. Vestibulum ante ipsum primis in faucibus.</p>
+        <img src="https://gallerix.ch/img/hero/sort/popular.jpg?rel=24" alt="Künstlerische Darstellung">
+        <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada.</p>
+        <p>Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui.</p>
+    </div>
+
+    <div class="section section4" id="section4">
+        <h2>Abschnitt 4: Kontaktinformationen</h2>
+        <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec velit neque, auctor sit amet aliquam vel.</p>
+        <p>Cras ultricies ligula sed magna dictum porta. Proin eget tortor risus.</p>
+        <img src="https://image.geo.de/30140630/t/6y/v4/w1440/r0/-/franzoesisch-polynesien-l-eric-martin-jpg--80030-.jpg" alt="Landschaft in Französisch-Polynesien">
+        <p>Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada.</p>
+        <p>Cras ultricies ligula sed magna dictum porta. Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <div class="section section5" id="section5">
+        <h2>Abschnitt 5: Über uns</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+        <p>Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+        <img src="https://www.apfelpage.de/wp-content/uploads/2023/05/Dynamic.png" alt="Grafik mit dynamischem Design">
+        <p>Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue.</p>
+        <p>Curabitur blandit tempus porttitor. Maecenas faucibus mollis interdum.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Dein Unternehmen. Alle Rechte vorbehalten.</p>
+    </footer>
+
+    <script>
+        function isElementInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom >= 0
+            );
+        }
+
+        function handleScroll() {
+            const sections = document.querySelectorAll('.section');
+            sections.forEach(section => {
+                if (isElementInViewport(section)) {
+                    section.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', handleScroll);
+        document.addEventListener('DOMContentLoaded', handleScroll);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffcccc;
+    margin: 0;
+    padding: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+h1 {
+    color: #b03060;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+h2 {
+    color: #b03060;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#friendList {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffe6e6;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.friend {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.friend h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.friend p {
+    margin: 10px 0;
+}
+
+.friend a {
+    color: #b03060;
+    text-decoration: none;
+}
+
+.friend a:hover {
+    text-decoration: underline;
+}
+
+form {
+    margin: 20px 0;
+}
+
+label {
+    display: block;
+    font-size: 1.2em;
+    color: #b03060;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+label[for="duSie"] {
+    display: inline;
+    margin-left: 5px;
+}
+
+input[type="radio"] + label {
+    display: inline;
+    margin-left: 5px;
+}
+
+input[type="radio"] {
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #b03060;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+button:hover {
+    background-color: #a02050;
+}
+
+.hidden {
+    display: none;
+}

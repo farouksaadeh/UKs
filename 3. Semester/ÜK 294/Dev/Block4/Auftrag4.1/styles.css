@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+#animated-box {
+    width: 150px;
+    height: 150px;
+    background-color: #3498db;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden; 
+    transition: transform 1s ease-in-out;
+}
+
+#animated-image {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    border-radius: 50%; 
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #3498db;
+        width: 150px;
+        height: 150px;
+    }
+    50% {
+        background-color: #e74c3c;
+        width: 250px;
+        height: 250px;
+    }
+    100% {
+        background-color: #f1c40f;
+        width: 150px;
+        height: 150px;
+    }
+}
+
+.animate {
+    animation: colorChange 2s linear infinite;
+    transform: rotate(360deg) translateX(100px) translateY(-50px);
+    border-radius: 50%;
+}
+
+#animate-btn, #barrel-roll-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#animate-btn:hover, #barrel-roll-btn:hover {
+    background-color: #27ae60;
+}
+
+@keyframes barrelRoll {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.barrel-roll {
+    animation: barrelRoll 2s ease-in-out infinite;
+}

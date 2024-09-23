@@ -1,0 +1,1 @@
+ALTER TABLE category_course MODIFY created_at NOT NULL DATETIME DEFAULT NOW();

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Wetterabfrage</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Wetterabfrage</h1>
+    <form id="zipcodeForm">
+        <label for="zipcode">Postleitzahl (CH):</label>
+        <input type="text" id="zipcode" name="zipcode" required pattern="^\d{4}$" title="Bitte geben Sie eine gültige 4-stellige Postleitzahl ein.">
+        <button type="submit">Wetter abfragen</button>
+    </form>
+    
+    <div id="result"></div>
+</body>
+</html>

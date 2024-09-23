@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passwortvalidierung mit animiertem Button</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <div class="container">
+        <form id="passwordForm" novalidate>
+            <h2>Passwortvalidierung</h2>
+            
+            <div class="form-group">
+                <label for="password1">Passwort:</label>
+                <input type="password" id="password1" name="password1" required minlength="8" placeholder="Mindestens 8 Zeichen">
+                <span class="error-message" id="error-password1">Passwort muss mindestens 8 Zeichen lang sein.</span>
+            </div>
+            
+            <div class="form-group">
+                <label for="password2">Passwort bestätigen:</label>
+                <input type="password" id="password2" name="password2" required minlength="8" placeholder="Passwort wiederholen">
+                <span class="error-message" id="error-password2">Passwörter müssen übereinstimmen.</span>
+            </div>
+            
+            <button type="submit" class="animated-button">Absenden</button>
+        </form>
+    </div>
+
+</body>
+</html>

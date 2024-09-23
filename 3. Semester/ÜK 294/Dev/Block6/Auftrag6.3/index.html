@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adress-Formular</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <h1>My best Friends</h1>
+
+    <div id="friendList">
+        <div class="friend">
+            <h2>Hans Muster</h2>
+            <p>Edenstrasse 20<br>8004 Zürich</p>
+            <a href="mailto:hans.muster@emalpe.com">hans.muster@emalpe.com</a>
+            <button class="deleteFriend">Löschen</button>
+        </div>
+    </div>
+
+    <h2>Add new friend</h2>
+    <form id="friendForm">
+        <label for="firstName">Vorname</label>
+        <input type="text" id="firstName" required><br>
+
+        <label for="lastName">Nachname</label>
+        <input type="text" id="lastName" required><br>
+
+        <label for="street">Strasse</label>
+        <input type="text" id="street" required><br>
+
+        <label for="zip">PLZ</label>
+        <input type="text" id="zip" pattern="[0-9]{4}" title="Bitte eine 4-stellige PLZ eingeben" required><br>
+
+        <label for="city">Ort</label>
+        <input type="text" id="city" required><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" required><br>
+
+        <label for="duSie">Du oder Sie:</label>
+        <input type="checkbox" id="duSie">
+        <label for="duSie">Du (wenn nicht ausgewählt, dann Sie)</label><br>
+
+        <label>Beziehung zur Person:</label><br>
+        <input type="radio" name="relation" value="Privat" required> Privat<br>
+        <input type="radio" name="relation" value="Schule"> Schule<br>
+        <input type="radio" name="relation" value="Geschäft"> Geschäft<br>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <div id="summary" class="hidden">
+        <h3>Zusammenfassung</h3>
+        <p id="summaryContent"></p>
+        <button id="addToFriendList">In die Liste hinzufügen</button>
+        <button id="cancel">Abbrechen</button>
+    </div>
+
+</body>
+</html>

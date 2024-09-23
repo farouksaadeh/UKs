@@ -1,0 +1,156 @@
+/* Allgemeine Stile */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f06, #48f);
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  form {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 12px;
+    padding: 20px;
+    width: 450px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  form:hover {
+    background-color: rgba(255, 255, 255, 1);
+    transform: scale(1.05);
+  }
+  
+  label {
+    font-size: 14px;
+    color: #555;
+    margin-top: 8px;
+    display: inline-block;
+    transition: color 0.3s ease;
+  }
+  
+  label:hover {
+    color: #0078d4;
+    font-weight: bold;
+  }
+  
+  input[type="text"], input[type="email"], input[type="tel"], textarea, input[type="submit"] {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  input[type="text"]:hover, input[type="email"]:hover, input[type="tel"]:hover, textarea:hover {
+    border-color: #48f;
+  }
+  
+  input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus {
+    border-color: #0078d4;
+    background-color: #e0f7ff;
+    outline: none;
+  }
+  
+  input:valid {
+    border-color: limegreen;
+  }
+  
+  input:invalid {
+    border-color: red;
+    background-color: #ffe6e6;
+  }
+  
+  input::placeholder, textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 8px;
+  }
+  
+  input[type="submit"] {
+    background-color: #48f;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #0078d4;
+  }
+  
+  input[type="submit"]:active {
+    background-color: #005bb5;
+    transform: translateY(2px);
+  }
+  
+  input[type="submit"]:focus {
+    outline: 3px solid rgba(0, 120, 212, 0.5);
+    outline-offset: 4px;
+  }
+  
+  /* Formular Fokus */
+  form:focus-within {
+    box-shadow: 0 6px 24px rgba(0, 120, 212, 0.5);
+  }
+  
+  /* Pseudoklassen */
+  input[type="text"]:first-of-type {
+    border: 2px dashed #ff6347;
+  }
+  
+  input[type="text"]:nth-of-type(2) {
+    border: 2px solid #4682b4;
+  }
+  
+  input[type="email"]:nth-of-type(odd) {
+    background-color: #ffe4e1;
+  }
+  
+  input[type="email"]:nth-of-type(even) {
+    background-color: #e6e6fa;
+  }
+  
+  textarea:nth-of-type(1) {
+    background-color: #f0f8ff;
+  }
+  
+  input[type="submit"]:nth-of-type(1) {
+    background-color: yellow;
+  }
+  
+  /* Mouse Follow Element */
+  #mouseFollow {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    pointer-events: none;
+    transition: transform 0.1s ease-out;
+    mix-blend-mode: multiply;
+  }
+  

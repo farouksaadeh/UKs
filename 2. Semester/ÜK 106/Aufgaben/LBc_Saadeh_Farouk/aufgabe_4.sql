@@ -1,0 +1,1 @@
+UPDATE person SET lastname = 'Nuesch' WHERE fistname = 'Patrick' lastname = 'Wirz';

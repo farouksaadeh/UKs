@@ -1,0 +1,173 @@
+/* Allgemeine Stile */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 5px 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Allgemeine Sektion-Stile */
+.section {
+    position: relative;
+    overflow: hidden;
+    padding: 100px 20px;
+    margin-top: 80px;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+
+.section.visible {
+    opacity: 1;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    width: 50px;
+    height: 3px;
+    background-color: #2196F3;
+    display: block;
+    margin: 10px auto 0;
+}
+
+.section img {
+    width: 100%;
+    max-width: 800px;
+    display: block;
+    margin: 30px auto;
+    opacity: 0;
+    transition: all 1.5s ease-out;
+}
+
+.section.visible img {
+    opacity: 1;
+}
+
+.section p {
+    max-width: 800px;
+    margin: 20px auto;
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.section.visible p {
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+
+/* Spezifische Effekte für einzelne Sektionen */
+.section1 {
+    background-color: #e3f2fd;
+    transform: translateY(50px);
+}
+
+.section1.visible {
+    transform: translateY(0);
+}
+
+.section2 {
+    background-color: #fff;
+    transform: translateX(-100%);
+}
+
+.section2.visible {
+    transform: translateX(0);
+}
+
+.section3 {
+    background-color: #e8f5e9;
+    transform: translateX(100%);
+}
+
+.section3.visible {
+    transform: translateX(0);
+}
+
+.section4 {
+    background-color: #fff;
+    transform: scale(0.8);
+}
+
+.section4.visible {
+    transform: scale(1);
+}
+
+.section5 {
+    background-color: #fce4ec;
+    transform: rotate(-5deg);
+}
+
+.section5.visible {
+    transform: rotate(0deg);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul li {
+        margin: 0 10px;
+    }
+
+    .section {
+        padding: 80px 10px;
+    }
+
+    .section h2 {
+        font-size: 1.5em;
+    }
+}

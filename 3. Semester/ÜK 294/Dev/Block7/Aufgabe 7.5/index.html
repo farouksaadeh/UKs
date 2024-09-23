@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Auftrag 7.5: Kommentare mit Authentifizierung erfassen</title>
+</head>
+<body>
+    <h1>Kommentar hinzufügen</h1>
+    <form id="commentForm">
+        <label for="username">Benutzername:</label>
+        <input type="text" id="username" required minlength="3" maxlength="16">
+        <br>
+        <label for="message">Nachricht:</label>
+        <textarea id="message" required minlength="3" maxlength="300"></textarea>
+        <br>
+        <button type="submit">Kommentar absenden</button>
+    </form>
+    <div id="result"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

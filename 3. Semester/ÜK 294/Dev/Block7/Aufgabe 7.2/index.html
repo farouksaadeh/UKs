@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auftrag 7.2 Daten mit fetch abschicken</title>
+</head>
+<body>
+    <h1>Post anzeigen</h1>
+    <div id="postContainer"></div>
+
+    <h2>Neuen Post erstellen</h2>
+    <form id="postForm">
+        <label for="title">Titel:</label>
+        <input type="text" id="title" name="title" required><br><br>
+
+        <label for="body">Inhalt:</label>
+        <textarea id="body" name="body" required></textarea><br><br>
+
+        <button type="submit">Post senden</button>
+    </form>
+
+    <div id="responseMessage"></div>
+    <br>
+    <br>
+    
+    <button id="deletePost">Post löschen</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
